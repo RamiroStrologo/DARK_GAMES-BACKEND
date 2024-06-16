@@ -5,6 +5,6 @@ export const register = async (req, res) => {};
 //GENERA UN JWT TOKEN Y LO GUARDA EN UNA COOKIE
 export const login = async (req, res) => {
   const token = tokenGenerator(req.user);
-  res.cookie('tokencookie', token, { httpOnly: true });
+  res.cookie('tokencookie', token, { httpOnly: false });
   res.send({ token: token });
 };
